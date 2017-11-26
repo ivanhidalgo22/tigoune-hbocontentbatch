@@ -1,0 +1,67 @@
+- name: Configure tigoune-batch with java 8
+  hosts: localhost
+  become: yes
+  become_user: root
+  become_method: sudo
+
+  vars:
+    java_implementation: oracle
+    java_oracle_version: 8
+    user: ubuntu
+    outputFolder: /home/ubuntu/tigoune/hbo/tigoune-hbocontentbatch/output/
+    localBatchFolder: /home/ubuntu/tigoune/hbo/tigoune-hbocontentbatch/LocalBatch/
+    backupFolder: /home/ubuntu/tigoune/hbo/tigoune-hbocontentbatch/Backup/
+
+  roles:
+    - role: gantsign.maven
+      maven_version: '3.3.9'
+      maven_is_default_installation: yes
+      maven_fact_group_name: maven
+    - role: kbrebanov.java
+
+
+  tasks:
+
+    - name: create directory "{{ localBatchFolder }}" if it don't exist
+      file:
+        path: "{{ localBatchFolder }}"
+        state: directory
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: 0775
+      with_items:
+        - /LocalBatch
+
+    - name: create directory "{{ backupFolder }}" if it don't exist
+      file:
+        path: "{{ backupFolder }}"
+        state: directory
+        owner: "{{ user }}"
+        group: "{{ user }}"
+        mode: 0775
+      with_items:
+        - /Backup
+
+    - name: clean project (mvn clean)
+      command: mvn clean
+      register: result
+    - debug: msg="{{ result }}"
+
+    - name: generates executable JAR file (mvn package)
+      command: mvn package
+      register: resultBuild
+    - debug: msg="{{ resultBuild }}"
+
+    - name: copy executable JAR file to "{{ outputFolder }}"
+      copy: src=target/tigouneHboSyncBatch.one-jar.jar dest={{ outputFolder }} mode=0777
+      
+    - name: copy script tigouneHboSyncBatchService to /etc/init.d/
+      copy: src=src/documents/deploymentScripts/tigouneHboSyncBatchService dest=/etc/init.d mode=0777
+
+    - name: stop tigouneHboSyncBatchService
+      service: name=tigouneHboSyncBatchService state=stopped
+
+    - name: start tigouneHboSyncBatchService
+      service: name=tigouneHboSyncBatchService state=restarted
+
+
