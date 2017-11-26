@@ -1,3 +1,3 @@
 #!/bin/bash
-ansible-playbook ../tigouneHbobatch.yml 
+ansible-playbook tigouneHbobatch.yml 
 
