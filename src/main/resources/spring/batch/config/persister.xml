@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx.xsd 
+    http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/jdbc
+	http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+	<import resource="classpath:spring/batch/config/aspects.xml"/>
+
+	<context:annotation-config/>
+
+	<bean id="hboProperties" 
+      class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name = "locations">
+			<list>
+				<value>classpath:database.properties</value>
+				<value>classpath:ftp.properties</value>
+				<value>classpath:aws.properties</value>
+                <value>classpath:mail.properties</value>
+			</list> 
+		</property>
+	</bean>
+
+	<bean id="ContentRepository" class="com.tigoune.hbo.repository.ContentRepository">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="${jdbc.JobUrl}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="hibernateDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+        destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl" value="${jdbc.ContentUrl}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean" >
+		<property name="dataSource" ref="hibernateDataSource"/>
+		<property name="packagesToScan">
+			<list>
+				<value>com.tigoune.hbo.model</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.format_sql">false</prop> 
+				<!--  <prop key="hibernate.hbm2ddl.auto">create</prop> -->
+			</props>
+		</property>   
+	</bean>
+
+	<!-- If you don't want to delete the job database's instances, 
+	     then apply the comments in the following instructions -->
+	<!-- create job-meta tables automatically -->
+	<!--<jdbc:initialize-database data-source="dataSource">
+		<jdbc:script location="org/springframework/batch/core/schema-drop-mysql.sql" />
+		<jdbc:script location="org/springframework/batch/core/schema-mysql.sql" />
+	</jdbc:initialize-database>-->
+
+</beans>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata id="OSVODTigoMillicom" mdEncoding="UTF-8" metadataIdentifier="XML">
+  <feature>
+    <unique-id>LGF195536</unique-id>
+    <licensor>
+      <id>693</id>
+      <name><![CDATA[LIONS GATE FILMS INT&#39;L]]></name>
+      <downloadable>true</downloadable>
+    </licensor>
+    <description language="SPA">
+      <release-year>2012</release-year>
+      <categories>
+        <category><![CDATA[Series/A-Z]]></category>
+      </categories>
+      <!--COMMENT: Genre lines are not created if genre is blank or if destination folder is different than /Programas"-->
+      <genres>
+        <genre order="1">Drama</genre>
+      </genres>
+      <title><![CDATA[Man with a Plan]]></title>
+      <original-language-title><![CDATA[MAD MEN]]></original-language-title>
+      <synopsis><![CDATA[Pete recibe una visita poco agradable. Ted se instala en su nueva oficina. Mientras, Peggy no parece estar muy cómoda regresando a SCDP. Se enciende el amorío de Don y Joan asiste inesperadamente al hospital.]]></synopsis>
+      <short-synopsis><![CDATA[Pete recibe una visita poco agradable. Ted se instala en su nueva oficina. Mientras, Peggy no parece estar muy cómoda regresando a SCDP.]]></short-synopsis>
+      <!--COMMENT: Episodes information is only included is program has a related parent series"-->
+      <episode-number>
+        <in-season>07</in-season>
+        <in-series>072</in-series>
+      </episode-number>
+    </description>
+    <description language="POR">
+      <release-year>2012</release-year>
+      <categories>
+        <category><![CDATA[Séries/A-Z]]></category>
+      </categories>
+      <!--COMMENT: Genre lines are not created if genre is blank or if destination folder is different than /Programas"-->
+      <genres>
+        <genre order="1">Drama</genre>
+      </genres>
+      <title><![CDATA[Man with a Plan]]></title>
+      <original-language-title><![CDATA[MAD MEN]]></original-language-title>
+      <synopsis><![CDATA[Com a fusão das agências, o clima de competição no escritório é visível. Don Draper chega atrasado para a reunião e resolve vingar-se de Ted Chaough. Cansada de ser a amante, Sylvia decide colocar um ponto final na sua aventura. Joan passa mal, enquanto Peggy parece pouco à vontade na volta ao convívio com antigos colegas. Megan chora ao saber da morte de Robert Kennedy.]]></synopsis>
+      <short-synopsis><![CDATA[A relação entre Don e Ted na nova agência não começa bem, e Peggy parece pouco à vontade. Megan chora ao saber da morte de Robert Kennedy.]]></short-synopsis>
+      <!--COMMENT: Episodes information is only included is program has a related parent series"-->
+      <episode-number>
+        <in-season>07</in-season>
+        <in-series>072</in-series>
+      </episode-number>
+    </description>
+    <description language="ENG">
+      <release-year>2012</release-year>
+      <categories>
+        <category><![CDATA[Series/A-Z]]></category>
+      </categories>
+      <!--COMMENT: Genre lines are not created if genre is blank or if destination folder is different than /Programas"-->
+      <genres>
+        <genre order="1">Drama</genre>
+      </genres>
+      <title><![CDATA[Man with a Plan]]></title>
+      <original-language-title><![CDATA[MAD MEN]]></original-language-title>
+      <synopsis><![CDATA[Pete’s lonely life is interrupted by a disturbed visitor. Ted settles in his new office, while Peggy doesn’t seem too comfortable returning to SCDP. In the meantime, Don’s affair heats up, and Joan has an unexpected arrival to the E.R.]]></synopsis>
+      <short-synopsis><![CDATA[Pete’s lonely life is interrupted by a visitor. Ted settles in his new office, while Peggy doesn’t seem too comfortable returning to SCDP.]]></short-synopsis>
+      <!--COMMENT: Episodes information is only included is program has a related parent series"-->
+      <episode-number>
+        <in-season>07</in-season>
+        <in-series>072</in-series>
+      </episode-number>
+    </description>
+    <offering>
+      <offer-type>Feature</offer-type>
+      <offer-subtype>Episodic</offer-subtype>
+      <unique-id>043983</unique-id>
+      <!-- AUTO CALULCATE !-->
+      <start-date>2013-06-04T01:00:00</start-date>
+      <end-date>2016-10-05T14:59:59</end-date>
+      <free-preview>FALSE</free-preview>
+      <first-burst/>
+      <last-burst/>
+      <publish-countries>
+        <country id="COL" offerid="77382">
+          <start-datetime>2013-06-04T01:00:00-05:00</start-datetime>
+          <end-datetime>2016-10-05T14:59:59-05:00</end-datetime>
+        </country>
+      </publish-countries>
+      <affiliates/>
+    </offering>
+    <ratings>
+      <rating country="Default">R</rating>
+    </ratings>
+    <parties>
+      <party role_type="ACTOR" billing="1">
+        <unique-id>22302</unique-id>
+        <first-name><![CDATA[John]]></first-name>
+        <last-name><![CDATA[Slattery]]></last-name>
+        <character><![CDATA[Roger Sterling]]></character>
+      </party>
+      <party role_type="ACTOR" billing="2">
+        <unique-id>16186</unique-id>
+        <first-name><![CDATA[Christina]]></first-name>
+        <last-name><![CDATA[Hendricks]]></last-name>
+        <character><![CDATA[Joan Harris]]></character>
+      </party>
+      <party role_type="ACTOR" billing="3">
+        <unique-id>5420</unique-id>
+        <first-name><![CDATA[Vincent]]></first-name>
+        <last-name><![CDATA[Kartheiser]]></last-name>
+        <character><![CDATA[Pete Campbell]]></character>
+      </party>
+      <party role_type="ACTOR" billing="4">
+        <unique-id>8536</unique-id>
+        <first-name><![CDATA[Elisabeth]]></first-name>
+        <last-name><![CDATA[Moss]]></last-name>
+        <character><![CDATA[Peggy Olson]]></character>
+      </party>
+      <party role_type="ACTOR" billing="5">
+        <unique-id>50972</unique-id>
+        <first-name><![CDATA[Jon]]></first-name>
+        <last-name><![CDATA[Hamm]]></last-name>
+        <character><![CDATA[Don Draper]]></character>
+      </party>
+      <party role_type="ACTOR" billing="6">
+        <unique-id>50612</unique-id>
+        <first-name><![CDATA[January]]></first-name>
+        <last-name><![CDATA[Jones]]></last-name>
+        <character><![CDATA[Betty Francis]]></character>
+      </party>
+      <party role_type="ACTOR" billing="7">
+        <unique-id>13806</unique-id>
+        <first-name><![CDATA[Jessica]]></first-name>
+        <last-name><![CDATA[Paré]]></last-name>
+        <character><![CDATA[Megan Draper]]></character>
+      </party>
+      <party role_type="ACTOR" billing="8">
+        <unique-id>60006</unique-id>
+        <first-name><![CDATA[Rich]]></first-name>
+        <last-name><![CDATA[Sommer]]></last-name>
+        <character><![CDATA[Harry Crane]]></character>
+      </party>
+      <party role_type="DIRECTOR" billing="1">
+        <unique-id>22302</unique-id>
+        <first-name><![CDATA[John]]></first-name>
+        <last-name><![CDATA[Slattery]]></last-name>
+      </party>
+      <party role_type="WRITER" billing="1">
+        <unique-id>50963</unique-id>
+        <first-name><![CDATA[Matthew]]></first-name>
+        <last-name><![CDATA[Weiner]]></last-name>
+      </party>
+    </parties>
+    <!--COMMENT: Episodes information is only included if program has a related parent series"-->
+    <season>
+      <unique-id>500702S06</unique-id>
+      <description language="SPA">
+        <Title><![CDATA[Temporada 06]]></Title>
+        <synopsis><![CDATA[La nueva temporada se inicia en diciembre de 1967, con los personajes está preparando para el nuevo año. Datos importantes, tales como la lucha en Vietnam y la Guerra Fría con la Unión Soviética, servirán como telón de fondo para los episodios. Más que nunca, los negocios y el placer van de la mano de la agencia, y otros secretos del pasado Don saldrán a la superficie.]]></synopsis>
+      </description>
+      <description language="POR">
+        <Title><![CDATA[Temporada 06]]></Title>
+        <synopsis><![CDATA[A nova temporada começa em dezembro de 1967, com os personagens preparando-se para a virada do ano. Fatos importantes, como os combates no Vietnã e a Guerra Fria com a então União Soviética, servirão de pano de fundo nos episódios. Mais do que nunca, negócios e prazer caminham lado a lado na agência, e outros segredos do passado de Don virão à tona.]]></synopsis>
+      </description>
+      <description language="ENG">
+        <Title><![CDATA[Season 06]]></Title>
+        <synopsis><![CDATA[Season 6 takes place between December 1967 and November 1968. Important events, like Vietnam and the Cold War are part of the background in this season.]]></synopsis>
+      </description>
+      <season-number>06</season-number>
+      <episodes>13</episodes>
+    </season>
+    <series>
+      <unique-id>16SER</unique-id>
+      <description language="SPA">
+        <Title><![CDATA[Mad Men]]></Title>
+        <synopsis><![CDATA[Ambientada en Nueva York durante los años 60, la elegante, sexy y provocativa serie gira alrededor del conflictivo mundo de Don Draper, un mujeriego e importante publicista, y sus colegas de la agencia de publicidad Sterling Cooper. Don se desenvuelve entre las salas de conferencias y en sus amoríos, mientras lucha por mantener un paso adelante en estos tiempos de cambio.]]></synopsis>
+      </description>
+      <description language="POR">
+        <Title><![CDATA[Mad Men]]></Title>
+        <synopsis><![CDATA[Série ambientada em Nova York, na década de 60, cujo ponto central é o executivo Don Draper, da agência de publicidade Sterling Cooper. Único programa de TV por assinatura a receber o prêmio Emmy de melhor série dramática nos quatro primeiros anos de exibição, Mad Men consegue reproduzir um pouco dos costumes e da história dos Estados Unidos naquela época.]]></synopsis>
+      </description>
+      <description language="ENG">
+        <Title><![CDATA[Mad Men]]></Title>
+        <synopsis><![CDATA[Set in 1960s New York, the sexy, stylized and provocative drama Mad Men follows the conflicted world of Don Draper, the biggest ad man in the business, and his colleagues at the Sterling Cooper Advertising Agency. As Don makes the plays in the boardroom and the bedroom, he struggles to stay a step ahead of the rapidly changing.]]></synopsis>
+      </description>
+    </series>
+    <videos>
+      <!--Content requires subtitles-->
+      <video type="PRO81">
+        <runtime>2856</runtime>
+        <Credits>
+          <Credit segment-type="Film_Slot">
+            <credit-som>01:00:00:00</credit-som>
+            <credit-eom>01:46:41:00</credit-eom>
+          </Credit>
+          <Credit segment-type="Action_Credits">
+            <credit-som>01:46:41:00</credit-som>
+            <credit-eom>01:47:00:00</credit-eom>
+          </Credit>
+          <Credit segment-type="Clean_Credits">
+            <credit-som>01:47:00:00</credit-som>
+            <credit-eom>01:47:36:00</credit-eom>
+          </Credit>
+        </Credits>
+		<Subtitles>
+          <Subtitle-language>SPA</Subtitle-language>
+          <Subtitle-language>POR</Subtitle-language>
+        </Subtitles>
+        <AudioTracks>
+          <original available="true">ENG</original>
+          <localized available="true">SPA</localized>
+          <localized available="true">POR</localized>
+        </AudioTracks>
+        <formats>
+          <format type="movieStream" manifest_number="c5" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c5.ism/manifest</format>
+          <format type="movieStream" manifest_number="c6" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c6.ism/manifest</format>
+          <format type="movieStream" manifest_number="c7" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c7.ism/manifest</format>
+          <format type="movieStream" manifest_number="c8" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c8.ism/manifest</format>
+          <format type="movieStream" manifest_number="m4" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m4.ism/manifest</format>
+          <format type="movieStream" manifest_number="m5" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m5.ism/manifest</format>
+          <format type="movieStream" manifest_number="m6" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m6.ism/manifest</format>
+          <format type="movieStream" manifest_number="m7" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m7.ism/manifest</format>
+          <format type="movieStream" manifest_number="m8" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m8.ism/manifest</format>
+          <format type="movieStream" manifest_number="w4" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w4.ism/manifest</format>
+          <format type="movieStream" manifest_number="w5" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w5.ism/manifest</format>
+          <format type="movieStream" manifest_number="w6" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w6.ism/manifest</format>
+          <format type="movieStream" manifest_number="w7" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w7.ism/manifest</format>
+          <format type="movieStream" manifest_number="w8" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w8.ism/manifest</format>         
+          <format type="movieStream" manifest_number="c5" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c5.m3u8</format>
+          <format type="movieStream" manifest_number="c6" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c6.m3u8</format>
+          <format type="movieStream" manifest_number="c7" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c7.m3u8</format>
+          <format type="movieStream" manifest_number="c8" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c8.m3u8</format>
+          <format type="movieStream" manifest_number="m4" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m4.m3u8</format>
+          <format type="movieStream" manifest_number="m5" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m5.m3u8</format>
+          <format type="movieStream" manifest_number="m6" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m6.m3u8</format>
+          <format type="movieStream" manifest_number="m7" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m7.m3u8</format>
+          <format type="movieStream" manifest_number="m8" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m8.m3u8</format>
+          <format type="movieStream" manifest_number="w4" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w4.m3u8</format>
+          <format type="movieStream" manifest_number="w5" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w5.m3u8</format>
+          <format type="movieStream" manifest_number="w6" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w6.m3u8</format>
+          <format type="movieStream" manifest_number="w7" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w7.m3u8</format>
+          <format type="movieStream" manifest_number="w8" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w8.m3u8</format>      
+          <format type="movieStream" manifest_number="c5" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c5.mpd</format>
+          <format type="movieStream" manifest_number="c6" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c6.mpd</format>
+          <format type="movieStream" manifest_number="c7" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c7.mpd</format>
+          <format type="movieStream" manifest_number="c8" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c8.mpd</format>
+          <format type="movieStream" manifest_number="m4" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m4.mpd</format>
+          <format type="movieStream" manifest_number="m5" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m5.mpd</format>
+          <format type="movieStream" manifest_number="m6" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m6.mpd</format>
+          <format type="movieStream" manifest_number="m7" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m7.mpd</format>
+          <format type="movieStream" manifest_number="m8" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m8.mpd</format>
+          <format type="movieStream" manifest_number="w4" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w4.mpd</format>
+          <format type="movieStream" manifest_number="w5" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w5.mpd</format>
+          <format type="movieStream" manifest_number="w6" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w6.mpd</format>
+          <format type="movieStream" manifest_number="w7" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w7.mpd</format>
+          <format type="movieStream" manifest_number="w8" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w8.mpd</format>
+        </formats>
+        <images>
+          <image type="Serie" image_resolution="640x960" lc="ORI">
+            <url>http://smorp03.hbopaseo.com/image/219SER_ORI_640x960_LGU.jpg</url>
+          </image>
+          <image type="Season" image_resolution="640x960" lc="SPA">
+            <url>http://smorp03.hbopaseo.com/image/501407S1_SPA_640x960_LGU.jpg</url>
+          </image>
+          <image type="Episode" image_resolution="640x960" lc="CLN">
+            <url>http://smorp03.hbopaseo.com/image/TTL603784_CLN_640x960_LGU.jpg</url>
+          </image>
+		  <image type="Episode" image_resolution="1920x1080" lc="CLN">
+            <url>http://smorp03.hbopaseo.com/image/TTL603784_CLN_1920x1080.jpg</url>
+          </image>
+        </images>
+      </video>
+    </videos>
+  </feature>
+</metadata>

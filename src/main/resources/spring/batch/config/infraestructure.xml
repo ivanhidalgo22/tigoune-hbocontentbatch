@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/tx 
+    http://www.springframework.org/schema/tx/spring-tx.xsd 
+    http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/jdbc
+	http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+	<import resource="classpath:spring/batch/config/persister.xml"/>	
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="${mail.server}" />
+		<property name="port" value="${mail.port}" />
+		<property name="username" value="${mail.username}" />
+		<property name="password" value="${mail.password}" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">${mail.smtp.auth}</prop>
+				<prop key="mail.smtp.starttls.enable">${mail.smtp.starttls.enable}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="templateMessage" class="org.springframework.mail.SimpleMailMessage">
+		<property name="from" value="${mail.from}"/>
+		<property name="to" value="${mail.to}"/>
+		<property name="subject" value="${mail.subject}"/>
+	</bean>
+
+	<bean id ="awsEmailMonitoringNotifier" class="com.tigoune.hbo.notifier.AwsEmailMonitoringNotifier">
+		<property name="from" value="${mail.from}"/>
+		<property name="to" value="${mail.to}"/>
+		<property name="subject"  value="${mail.subject}"/>
+		<property name="splitSeparator" value=","/>
+	</bean>
+
+	<bean id="emailMonitoringNotifier" class="com.tigoune.hbo.notifier.EmailMonitoringNotifier">
+		<property name="mailSender" ref="mailSender"/> 
+		<property name="templateMessage" ref="templateMessage"/>
+	</bean>
+
+	<bean id="CustomHibernateItemWriter" class="com.tigoune.hbo.writer.CustomHibernateItemWriter">
+		<property name="contentService" ref="ContentService"/>
+	</bean>
+
+	<bean id="HboContentProcessor" class="com.tigoune.hbo.processor.HboContentProcessor" scope="prototype">
+		<property name="metadataToContentMapper" ref="metadataToContentMapper"/>
+	</bean>
+
+	<bean id="resizeImageProcessor" class="com.tigoune.hbo.processor.ResizeImageProcessor" scope="prototype">
+		<property name="storage" ref="s3ImagesStorage"/>
+		<property name="cloudFrontUri" value="${aws.cloudFront}"/>
+	</bean>
+
+	<bean id="metadataToContentMapper" class="com.tigoune.hbo.mapper.MovieContentMapper" />
+
+	<!-- ItemWriter which writes data to database -->
+	<bean id="hibernateDatabaseItemWriter" class="org.springframework.batch.item.database.HibernateItemWriter">
+		<property name="sessionFactory" ref="sessionFactory" />	
+		<property name="clearSession" value="true"/>	
+	</bean>
+
+	<bean id="moviesMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name="classesToBeBound">
+			<list>
+				<value>com.tigoune.hbo.model.metadata.Metadata</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="multiResourceItemReader" class="org.springframework.batch.item.file.MultiResourceItemReader" scope="step" >
+		<property name="resources" value="${ftp.sourceDirectory}*.xml" />
+		<property name="delegate" ref="xmlItemReader" />
+		<property name="saveState" value="true"/>
+		<property name="strict" value="false"/>
+	</bean>
+
+	<bean id="xmlItemReader"
+        class="org.springframework.batch.item.xml.StaxEventItemReader">
+		<property name="fragmentRootElementName" value="metadata" />
+		<property name="unmarshaller" ref="ordenUnmarshaller" />
+	</bean>
+
+	<!-- Read and map values to object, via jaxb2 -->
+	<bean id="ordenUnmarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+		<property name="classesToBeBound">
+			<list>		
+				<value>com.tigoune.hbo.model.metadata.Metadata</value>
+			</list>
+		</property>
+	</bean>  
+
+	<bean id="ftpClientFactory"
+    class="org.springframework.integration.ftp.session.DefaultFtpsSessionFactory">
+		<property name="host" value="${ftp.host}"/>
+		<property name="port" value="${ftp.port}"/>
+		<property name="username" value="${ftp.username}"/>
+		<property name="password" value="${ftp.password}"/>
+		<property name="clientMode" value="0"/>
+		<property name="fileType" value="2"/>
+	</bean>
+
+	<!-- <bean id="ftpClientFactory"
+    class="org.springframework.integration.ftp.session.DefaultFtpSessionFactory">
+		<property name="host" value="${ftp.host}"/>
+		<property name="port" value="${ftp.port}"/>
+		<property name="username" value="${ftp.username}"/>
+		<property name="password" value="${ftp.password}"/>
+		<property name="clientMode" value="0"/>
+		<property name="fileType" value="2"/>
+		<property name="bufferSize" value="100000"/>
+	</bean> -->
+
+	<bean id="ftpGetRemoteFilesTasklet" class="com.tigoune.hbo.tasklet.FtpGetRemoteFilesTasklet" >
+		<property name="retryIfNotFound" value="true" />
+		<property name="downloadFileAttempts" value="3" />
+		<property name="retryIntervalMilliseconds" value="10000" />
+		<property name="fileNamePattern" value="*.xml" />
+		<property name="remoteDirectory" value="${ftp.remoteDirectory}" />
+		<property name="localDirectory" ref="file" />
+		<property name="sessionFactory" ref="ftpClientFactory" />
+		<property name="autoCreateLocalDirectory" value="false"/>
+		<property name="deleteRemoteFiles" value="true" />
+	</bean>
+
+	<bean id="fileBackupTasklet" class="com.tigoune.hbo.tasklet.FileBackupTasklet" >
+		<property name="sourceDirectory" value="${ftp.sourceDirectory}" />
+		<property name="destDirectory" value="${ftp.backupDirectory}" />
+		<property name="storage" ref="s3Storage" />
+		<property name="backupExt" value=".bck" />
+		<property name="fileHelper" ref="fileHelper" />
+		<property name="dateFormatPattern" value="yyyyMMddHHmmssmm" />
+	</bean>
+
+	<bean id="fileStorage" class="com.tigoune.hbo.storage.FileStorage">
+		<property name="fileHelper" ref="fileHelper" />
+	</bean>
+
+	<bean id="s3Storage" class="com.tigoune.hbo.storage.S3Storage">
+		<property name="bucketName" value="${aws.bucketName}" />
+		<property name="fileHelper" ref="fileHelper" />
+	</bean>
+
+	<bean id="s3ImagesStorage" class="com.tigoune.hbo.storage.S3Storage">
+		<property name="bucketName" value="${aws.imagesbucketName}" />
+		<property name="fileHelper" ref="fileHelper" />
+	</bean>
+
+	<bean id="file" class="java.io.File">
+		<constructor-arg value="${ftp.localDirectory}"/>
+	</bean>
+	
+	<bean id="amazonSimpleEmailService" class="com.amazonaws.services.simpleemail.AmazonSimpleEmailServiceAsyncClient">
+		<constructor-arg ref = "basicAWSCredentials"/>
+		<property name="region" ref="awsRegion" />
+	</bean>
+	
+	<bean id="awsRegion" class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+	    <property name="targetClass" value="com.amazonaws.regions.RegionUtils"/>
+	    <property name="targetMethod" value="getRegion"/>
+	    <property name="arguments">
+	        <list>
+	            <value>${aws.region}</value>
+	        </list>
+	    </property>
+	</bean>
+	
+	<bean id="amazonS3Client" class="com.amazonaws.services.s3.AmazonS3Client">
+		<constructor-arg ref = "basicAWSCredentials"/>
+	</bean>
+	
+	<bean id="basicAWSCredentials" class="com.amazonaws.auth.BasicAWSCredentials">
+		<constructor-arg type = "java.lang.String" value = "${aws.accessKey}"/>
+		<constructor-arg type = "java.lang.String" value = "${aws.secretKey}"/>
+	</bean>
+
+	<bean id="customSkipListener" class="com.tigoune.hbo.listener.CustomSkipListener">
+	</bean>
+
+	<bean id="fileHelper" class="com.tigoune.hbo.helper.FileHelper" scope="singleton">
+		<property name="fileNamePattern" value=".xml" />
+	</bean>
+</beans>

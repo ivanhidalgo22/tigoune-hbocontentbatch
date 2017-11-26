@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<metadata id="OSVODTigoMillicom" mdEncoding="UTF-8" metadataIdentifier="XML">
+  <feature>
+    <unique-id>TTL600925</unique-id>
+    <licensor>
+      <id>399</id>
+      <name><![CDATA[COLUMBIA]]></name>
+      <downloadable>true</downloadable>
+    </licensor>
+    <description language="SPA">
+      <release-year>2016</release-year>
+      <categories>
+        <category><![CDATA[Películas]]></category>
+      </categories>
+      <!--COMMENT: Genre lines are not created if genre is blank or if destination folder is different than /Programas"-->
+      <genres>
+        <genre order="1">Drama</genre>
+      </genres>
+      <title><![CDATA[La Familia Hollars]]></title>
+      <original-language-title><![CDATA[The Hollars]]></original-language-title>
+      <synopsis><![CDATA[John Hollar, un artista en la ciudad de Nueva York, debe regresar a su pequeño pueblo natal al enterarse que su mamá está enferma de gravedad. Al llegar, John es inmediatamente agobiado por problemas qué él pensó haber dejado atrás. Pero pronto se da cuenta de que todos los caminos conducen a tu hogar.]]></synopsis>
+      <short-synopsis><![CDATA[Al regresar a su pequeño pueblo natal para cuidar de su mamá, un artista citadino se ve agobiado por problemas del pasado.]]></short-synopsis>
+    </description>
+    <description language="POR">
+      <release-year>2016</release-year>
+      <categories>
+        <category><![CDATA[Filmes]]></category>
+      </categories>
+      <!--COMMENT: Genre lines are not created if genre is blank or if destination folder is different than /Programas"-->
+      <genres>
+        <genre order="1">Drama</genre>
+      </genres>
+      <title><![CDATA[Família Hollar]]></title>
+      <original-language-title><![CDATA[The Hollars]]></original-language-title>
+      <synopsis><![CDATA[John Hollar, um artista de Nova York, volta à sua pequena cidade natal ao saber que sua mãe está gravemente doente. Lá ele é envolvido por problemas que pensou ter deixado para trás.]]></synopsis>
+      <short-synopsis><![CDATA[Um artista de Nova York volta à sua pequena cidade natal e é envolvido por problemas que pensou ter deixado para trás.]]></short-synopsis>
+    </description>
+    <description language="ENG">
+      <release-year>2016</release-year>
+      <categories>
+        <category><![CDATA[Movies]]></category>
+      </categories>
+      <!--COMMENT: Genre lines are not created if genre is blank or if destination folder is different than /Programas"-->
+      <genres>
+        <genre order="1">Drama</genre>
+      </genres>
+      <title><![CDATA[The Hollars]]></title>
+      <original-language-title><![CDATA[The Hollars]]></original-language-title>
+      <synopsis><![CDATA[John Hollar, a NYC artist, is forced to return to his small hometown after finding out his mother is seriously ill. Back home, Joh is immediately swept up by the problems he thought he’d left behind, but soon he realizes all roads lead home.]]></synopsis>
+      <short-synopsis><![CDATA[A NYC artist returns to his small hometown and is immediately swept up by the problems he thought he’d left behind.]]></short-synopsis>
+    </description>
+    <offering>
+      <offer-type>Feature</offer-type>
+      <offer-subtype>Non_Episodic</offer-subtype>
+      <unique-id>119847</unique-id>
+      <!-- AUTO CALULCATE !-->
+      <start-date>2017-05-15T21:00:00</start-date>
+      <end-date>2018-08-12T00:00:00</end-date>
+      <free-preview>FALSE</free-preview>
+      <first-burst/>
+      <last-burst/>
+      <publish-countries>
+        <country id="COL" offerid="171704">
+          <start-datetime>2017-05-15T20:00:00-05:00</start-datetime>
+          <end-datetime>2018-08-12T00:00:00-05:00</end-datetime>
+        </country>
+      </publish-countries>
+      <affiliates/>
+    </offering>
+    <ratings>
+      <rating country="Default">PG</rating>
+    </ratings>
+    <parties>
+      <party role_type="ACTOR" billing="1">
+        <unique-id>12113</unique-id>
+        <first-name><![CDATA[Margo]]></first-name>
+        <last-name><![CDATA[Martindale]]></last-name>
+        <character><![CDATA[Sally Hollar]]></character>
+      </party>
+      <party role_type="ACTOR" billing="2">
+        <unique-id>12114</unique-id>
+        <first-name><![CDATA[Sharlto]]></first-name>
+        <last-name><![CDATA[Copley]]></last-name>
+        <character><![CDATA[Ron Hollar]]></character>
+      </party>
+      <party role_type="ACTOR" billing="3">
+        <unique-id>2733</unique-id>
+        <first-name><![CDATA[Richard]]></first-name>
+        <last-name><![CDATA[Jenkins]]></last-name>
+        <character><![CDATA[Don Hollar]]></character>
+      </party>
+      <party role_type="ACTOR" billing="4">
+        <unique-id>51772</unique-id>
+        <first-name><![CDATA[John]]></first-name>
+        <last-name><![CDATA[Krasinski]]></last-name>
+        <character><![CDATA[John Hollar]]></character>
+      </party>
+      <party role_type="ACTOR" billing="5">
+        <unique-id>51618</unique-id>
+        <first-name><![CDATA[Anna]]></first-name>
+        <last-name><![CDATA[Kendrick]]></last-name>
+        <character><![CDATA[Rebecca]]></character>
+      </party>
+      <party role_type="ACTOR" billing="6">
+        <unique-id>63741</unique-id>
+        <first-name><![CDATA[Randall]]></first-name>
+        <last-name><![CDATA[Park]]></last-name>
+        <character><![CDATA[Dr. Fong]]></character>
+      </party>
+      <party role_type="ACTOR" billing="7">
+        <unique-id>61098</unique-id>
+        <first-name><![CDATA[Charlie]]></first-name>
+        <last-name><![CDATA[Day]]></last-name>
+        <character><![CDATA[Jason]]></character>
+      </party>
+      <party role_type="ACTOR" billing="8">
+        <unique-id>2007</unique-id>
+        <first-name><![CDATA[Mary Kay]]></first-name>
+        <last-name><![CDATA[Place]]></last-name>
+        <character><![CDATA[Pam]]></character>
+      </party>
+      <party role_type="DIRECTOR" billing="1">
+        <unique-id>51712</unique-id>
+        <first-name><![CDATA[John]]></first-name>
+        <last-name><![CDATA[Krasinski]]></last-name>
+      </party>
+    </parties>
+    <videos>
+      <!--Content requires subtitles-->
+      <video type="PRO81">
+        <runtime>5301</runtime>
+        <Credits>
+          <Credit segment-type="Film_Slot">
+            <credit-som>01:00:00:00</credit-som>
+            <credit-eom>02:22:20:00</credit-eom>
+          </Credit>
+          <Credit segment-type="Clean_Credits">
+            <credit-som>02:22:20:00</credit-som>
+            <credit-eom>02:28:21:00</credit-eom>
+          </Credit>
+        </Credits>
+        <Subtitles>
+          <Subtitle-language>SPA</Subtitle-language>
+          <Subtitle-language>POR</Subtitle-language>
+        </Subtitles>
+        <AudioTracks>
+          <original available="true">ENG</original>
+          <localized available="true">SPA</localized>
+          <localized available="true">POR</localized>
+        </AudioTracks>
+        <formats>
+          <format type="movieStream" manifest_number="c5" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c5.ism/manifest</format>
+          <format type="movieStream" manifest_number="c6" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c6.ism/manifest</format>
+          <format type="movieStream" manifest_number="c7" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c7.ism/manifest</format>
+          <format type="movieStream" manifest_number="c8" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_c8.ism/manifest</format>
+          <format type="movieStream" manifest_number="m4" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m4.ism/manifest</format>
+          <format type="movieStream" manifest_number="m5" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m5.ism/manifest</format>
+          <format type="movieStream" manifest_number="m6" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m6.ism/manifest</format>
+          <format type="movieStream" manifest_number="m7" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m7.ism/manifest</format>
+          <format type="movieStream" manifest_number="m8" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_m8.ism/manifest</format>
+          <format type="movieStream" manifest_number="w4" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w4.ism/manifest</format>
+          <format type="movieStream" manifest_number="w5" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w5.ism/manifest</format>
+          <format type="movieStream" manifest_number="w6" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w6.ism/manifest</format>
+          <format type="movieStream" manifest_number="w7" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w7.ism/manifest</format>
+          <format type="movieStream" manifest_number="w8" DRM_provider="PR" packaging="SS">http://l3edvpsq01.cust.footprint.net/vod/unencrypted/ss/HPO167080_11EPRSS10C/HPO167080_11EPRSS10C_w8.ism/manifest</format>         
+          <format type="movieStream" manifest_number="c5" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c5.m3u8</format>
+          <format type="movieStream" manifest_number="c6" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c6.m3u8</format>
+          <format type="movieStream" manifest_number="c7" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c7.m3u8</format>
+          <format type="movieStream" manifest_number="c8" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_c8.m3u8</format>
+          <format type="movieStream" manifest_number="m4" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m4.m3u8</format>
+          <format type="movieStream" manifest_number="m5" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m5.m3u8</format>
+          <format type="movieStream" manifest_number="m6" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m6.m3u8</format>
+          <format type="movieStream" manifest_number="m7" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m7.m3u8</format>
+          <format type="movieStream" manifest_number="m8" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_m8.m3u8</format>
+          <format type="movieStream" manifest_number="w4" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w4.m3u8</format>
+          <format type="movieStream" manifest_number="w5" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w5.m3u8</format>
+          <format type="movieStream" manifest_number="w6" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w6.m3u8</format>
+          <format type="movieStream" manifest_number="w7" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w7.m3u8</format>
+          <format type="movieStream" manifest_number="w8" DRM_provider="PR-Envelope" packaging="HLS">http://l3edvphq01.cust.footprint.net/vod/unencrypted/hls/HPO167080_11EPRHS10C/HPO167080_11EPRHS10C_w8.m3u8</format>      
+          <format type="movieStream" manifest_number="c5" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c5.mpd</format>
+          <format type="movieStream" manifest_number="c6" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c6.mpd</format>
+          <format type="movieStream" manifest_number="c7" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c7.mpd</format>
+          <format type="movieStream" manifest_number="c8" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_c8.mpd</format>
+          <format type="movieStream" manifest_number="m4" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m4.mpd</format>
+          <format type="movieStream" manifest_number="m5" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m5.mpd</format>
+          <format type="movieStream" manifest_number="m6" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m6.mpd</format>
+          <format type="movieStream" manifest_number="m7" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m7.mpd</format>
+          <format type="movieStream" manifest_number="m8" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_m8.mpd</format>
+          <format type="movieStream" manifest_number="w4" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w4.mpd</format>
+          <format type="movieStream" manifest_number="w5" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w5.mpd</format>
+          <format type="movieStream" manifest_number="w6" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w6.mpd</format>
+          <format type="movieStream" manifest_number="w7" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w7.mpd</format>
+          <format type="movieStream" manifest_number="w8" DRM_provider="WV" packaging="Dash">http://l3edvwdq01.cust.footprint.net/video/VOD/ne/md/HPO167080_11E/HPO167080_11E_w8.mpd</format>
+        </formats>
+        <images>
+          <image type="Movie" lc="SPA" image_resolution="640x960">
+            <url>http://smorp03.hbopaseo.com/image/BVI083601_SPA_640x960_LGU.jpg</url>
+          </image>
+		  <image type="Movie" lc="CLN" image_resolution="1920x1080">
+            <url>http://smorp03.hbopaseo.com/image/BVI083601_CLN_1920x1080.jpg</url>
+          </image>
+        </images>
+      </video>
+    </videos>
+  </feature>
+</metadata>

@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /tigo/hbo/test/
+hooks:
+  BeforeInstall:
+    - location: scripts/stop_service
+      timeout: 300
+      runas: root
+  Install:
+    - location: scripts/install_service
+      timeout: 300
+      runas: root

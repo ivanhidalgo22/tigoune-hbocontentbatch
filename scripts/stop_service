@@ -1,0 +1,6 @@
+#!/bin/bash
+isExistApp = `pgrep tigouneHboSyncBatchService`
+if [[ -n  $isExistApp ]]; then
+    service service tigouneHboSyncBatchService stop   
+fi
+

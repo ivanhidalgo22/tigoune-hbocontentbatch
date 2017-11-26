@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:int-ftp="http://www.springframework.org/schema/integration/ftp"
+	xsi:schemaLocation="http://www.springframework.org/schema/batch
+	http://www.springframework.org/schema/batch/spring-batch.xsd
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd
+	http://www.springframework.org/schema/integration/ftp
+    http://www.springframework.org/schema/integration/ftp/spring-integration-ftp.xsd
+    http://www.springframework.org/schema/task
+    http://www.springframework.org/schema/task/spring-task.xsd">
+
+	<import resource="classpath:spring/batch/config/aspects.xml"/>
+	<import resource="classpath:spring/batch/config/infraestructure.xml"/>
+	<import resource="classpath:spring/batch/config/persister.xml"/>
+	<import resource="classpath:spring/batch/config/domain.xml"/>
+
+	<batch:job id="TigouneHboBatch" restartable="true">
+		<batch:step id="step1" next="step2" >
+			<batch:tasklet ref="ftpGetRemoteFilesTasklet" transaction-manager="transactionManager">
+			</batch:tasklet>
+		</batch:step>
+		<batch:step id="step2" next="step3">
+			<batch:tasklet transaction-manager="transactionManager" allow-start-if-complete="true" start-limit="3" task-executor="taskExecutor">
+				<batch:chunk reader="multiResourceItemReader" writer="CustomHibernateItemWriter"
+        			 processor="processor" commit-interval="1" skip-limit="20">
+					 <batch:skippable-exception-classes>
+					    <batch:include class="com.tigoune.hbo.mapper.InvalidContentException"/>
+						<batch:include class="com.tigoune.hbo.repository.PersisterException"/>
+						<batch:include class="java.io.IOException"/>
+						<batch:include class="java.lang.Exception"/>
+					</batch:skippable-exception-classes>
+					<batch:listeners>
+						<batch:listener ref="customSkipListener"/>
+					</batch:listeners>
+				</batch:chunk>
+			</batch:tasklet>
+		</batch:step>
+		<batch:step id="step3">
+			<batch:tasklet ref="fileBackupTasklet" transaction-manager="transactionManager" allow-start-if-complete="true" start-limit="3">
+			</batch:tasklet>
+		</batch:step>
+		<batch:listeners>
+			<batch:listener ref="monitoringJobListener" />
+		</batch:listeners>
+	</batch:job>
+	
+	<bean id="taskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="1"/>
+		<property name="maxPoolSize" value="1"/>
+	</bean>
+
+	<bean id="processor" class="org.springframework.batch.item.support.CompositeItemProcessor">
+		<property name="delegates">
+			<list>
+				<ref bean="HboContentProcessor" />
+				<ref bean="resizeImageProcessor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="runScheduler" class="com.tigoune.hbo.scheduler.RunScheduler">
+		<property name="job" ref="TigouneHboBatch"/>
+		<property name="jobLauncher" ref="jobLauncher"/>
+	</bean>
+
+	<bean id="monitoringJobListener" class="com.tigoune.hbo.listener.MonitoringExecutionListener">
+		<property name="monitoringNotifier" ref="awsEmailMonitoringNotifier"/>
+	</bean>
+
+	<!-- Run every 5 seconds -->
+	<task:scheduled-tasks>
+		<task:scheduled ref="runScheduler" method="run" cron="0 0/30 13-23 * * MON-FRI" />
+		<!-- <task:scheduled ref="runScheduler" method="run" cron="0 0 24 * * *" /> -->
+	</task:scheduled-tasks>
+
+	<bean id="jobRepository" class="org.springframework.batch.core.repository.support.JobRepositoryFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="transactionManager" ref="batchTransactionManager"/>
+		<property name="databaseType" value="mysql" />
+	</bean>
+
+	<bean id="jobLauncher" class="org.springframework.batch.core.launch.support.SimpleJobLauncher">
+		<property name="jobRepository" ref="jobRepository" />
+	</bean>
+
+</beans>
