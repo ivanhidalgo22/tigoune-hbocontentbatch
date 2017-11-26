@@ -12,12 +12,12 @@
     localBatchFolder: /home/ubuntu/tigoune/hbo/tigoune-hbocontentbatch/LocalBatch/
     backupFolder: /home/ubuntu/tigoune/hbo/tigoune-hbocontentbatch/Backup/
 
-  roles:
-    - role: gantsign.maven
-      maven_version: '3.3.9'
-      maven_is_default_installation: yes
-      maven_fact_group_name: maven
-    - role: kbrebanov.java
+  #roles:
+    #- role: gantsign.maven
+     # maven_version: '3.3.9'
+      #maven_is_default_installation: yes
+      #maven_fact_group_name: maven
+    #- role: kbrebanov.java
 
 
   tasks:
